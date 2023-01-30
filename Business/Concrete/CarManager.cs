@@ -1,6 +1,5 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
-using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -20,6 +19,31 @@ namespace Business.Concrete
         public List<Car> GetAll()
         {
             return _carDal.GetAll();
+        }
+
+        public void Add(Car entity)
+        {
+            _carDal.Add(entity);
+        }
+
+        public void Delete(Car entity)
+        {
+            _carDal.Delete(entity);
+        }
+
+        public void Update(Car entity)
+        {
+            _carDal.Update(entity);
+        }
+
+        public List<Car> GetAllByBrandId(int brandId)
+        {
+            return _carDal.GetAll(c => c.BrandId == brandId);
+        }
+
+        public List<Car> GetAllByColorId(int colorId)
+        {
+            return _carDal.GetAll(c => c.ColorId == colorId);
         }
     }
 }
