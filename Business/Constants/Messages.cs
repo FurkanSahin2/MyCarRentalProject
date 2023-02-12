@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,5 +19,7 @@ namespace Business.Constants
         public static string RentalsListed = "Kiralanmalar listelendi";
         public static string CustomersListed = "Müşteriler listelendi";
         public static string UsersListed = "Kullanıcılar listelendi";
+        public static string RentalDateisNull = "Arabanın kiralanması için teslim edilmiş olması gereklidir";
+        public static string RentalAdded = "Araba kiralama işlemi başarıyla gerçekleşti";
     }
 }
